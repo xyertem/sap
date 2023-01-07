@@ -1,0 +1,11 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 1000,
+      "driver": "SQLite",
+      "name": "bookshop",
+      "database": "${workspaceFolder:sap}/my-bookshop/bookshop.db"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}

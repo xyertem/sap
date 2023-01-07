@@ -1,7 +1,20 @@
-using my.bookshop as my from '../db/data-model';
+using {sap.capire.bookshop as my} from '../db/schema';
 
+@path : '/browse'
 service CatalogService {
-  entity Books @readonly as projection on my.Books;
-  entity Authors @readonly as projection on my.Authors;
-  entity Orders @insertonly as projection on my.Orders;
+
+  @readonly
+  entity Books  as
+    select from my.Books {
+      *
+    }
+    excluding {
+      createdBy,
+      modifiedBy
+    };
+
+  @requires_ : 'authenticated-user'
+  @insertonly
+  entity Orders as projection on my.Orders;
+
 }
