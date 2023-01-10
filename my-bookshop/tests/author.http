@@ -1,0 +1,2 @@
+### Browse Authors
+GET http://localhost:4004/browse/Authors
