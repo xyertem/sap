@@ -1,0 +1,2 @@
+### Getting top currencies
+GET http://localhost:4004/browse/Currencies

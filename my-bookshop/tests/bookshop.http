@@ -10,5 +10,13 @@ Content-Type: application/json
 
 { 
     "title": "Anna Karenina",
-    "stock": 10
+    "stock": 10,
+    "price": 25
+}
+### Try to update a book
+PUT http://localhost:4004/browse/Books(ID=201)
+Content-Type: application/json
+
+{
+    "price": 25
 }
